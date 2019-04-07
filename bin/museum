@@ -1,2 +1,7 @@
 #!/usr/bin/env ruby
-require_relative "../lib/museum"
+require_relative "../lib/environment"
+
+
+#CLI.new.start 
+
+Scraper.new.scrape_page
