@@ -1,7 +1,7 @@
 class CLI 
   
-  def start 
-  puts "Welcome!!!"
+ def start 
+ puts  "                        WELCOME !!!       "
   Scraper.new.scrape_page
   menu
   end 
