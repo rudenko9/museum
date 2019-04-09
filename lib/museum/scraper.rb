@@ -4,8 +4,8 @@ class Scraper
     html = open("https://www.montclairartmuseum.org/exhibitions/on-view")
     doc = Nokogiri::HTML(html)
    
-    doc.css("div.view-content").each do |exhibition|
-      exhib = exhibition.css("div.view-content div h2").text.strip
+    doc.css("div.region.region-content").each do |exhibition|
+      exhib = exhibition.css("div.view-content div h2").text
      #binding.pry
    
     
