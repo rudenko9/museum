@@ -8,8 +8,7 @@ class CLI
   
   def menu
     Exhibition.all.each.with_index(1) do |exhibition, index|
-      puts "#{index}. #{exhibition.exhib_first_part} #{exhibition.exhib_second_part}"
-    
+      puts "#{index}. #{exhibition.exhib}"
     end 
   end
 
