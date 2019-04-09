@@ -1,11 +1,14 @@
 class Exhibition 
-  attr_accessor :exhibit_first_part, :exhibit_second_part
+  attr_accessor :exhib_first_part, :exhib_second_part
+  
   @@all = []
-  def initialize(exhibit_first_part, exhibit_second_part)
-    @exhibit_first_part = exhibit_first_part
-    @exhibit_second_part = exhibit_second_part
+  
+  def initialize(exhib_first_part, exhib_second_part)
+    @exhib_first_part = exhib_first_part
+    @exhib_second_part = exhib_second_part
     
     @@all << self 
+    
   end
   
   def self.all
