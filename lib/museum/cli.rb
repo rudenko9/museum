@@ -7,8 +7,11 @@ class CLI
   end 
   
   def menu
-    Exhibition.all.each.with_index(1) do |exhibition, index|
-      puts "#{index}. #{exhibition.exhib}"
+    Exhibition.all.each.with_index(1) do |site_name, index|
+      #binding.pry
+      puts "#{index}. #{site_name.title}" 
+      
+      
     end 
   end
 

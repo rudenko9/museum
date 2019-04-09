@@ -1,14 +1,11 @@
 class Exhibition 
-  attr_accessor :exhib 
-  #:exhib_first_part, :exhib_second_part
+  attr_accessor  :title, :info, :url  
+  
   
   @@all = []
   
-  #def initialize(exhib_first_part, exhib_second_part)
-   # @exhib_first_part = exhib_first_part
-    #@exhib_second_part = exhib_second_part
-  def initialize(exhib)  
-    @exhib = exhib 
+  def initialize(title) 
+    @title= title
     @@all << self 
     
   end
