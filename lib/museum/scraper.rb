@@ -10,7 +10,10 @@ class Scraper
       new_exhibition = Exhibition.new(title) unless title.empty?
       new_exhibition.info = exhibition.css("p").text unless new_exhibition.nil?
       
-      binding.pry
+      #new_exhibition.url = exhibition.css("div a")["href"]
+      #"https://www.montclairartmuseum.org#{exhibition.attribute("href")}"
+      
+      #binding.pry
    
     
    

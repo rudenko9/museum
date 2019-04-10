@@ -14,5 +14,10 @@ class CLI
       
     end 
   end
+  
+  def exit
+    puts "Thank You For Visiting Our Museum!"
+  end 
+    
 
 end 
