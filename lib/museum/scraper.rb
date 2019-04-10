@@ -7,6 +7,9 @@ class Scraper
     doc.css("div.view-content div").each do |exhibition|
     
       title = exhibition.css("h2").text.strip 
+      new_exhibition = Exhibition.new(title) unless title.empty?
+      new_exhibition.info = exhibition.css("p").text unless new_exhibition.nil?
+      
       binding.pry
    
     
