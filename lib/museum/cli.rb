@@ -4,18 +4,18 @@ class CLI
  puts  "                        WELCOME !!!       "
   Scraper.new.scrape_page
   list_exhibition
-  menu
-  input = gets.chomp.to_i 
-  while input != 0 
-  exhibition_info(input)
-  menu
-  if input = gets.chomp.downcase == "list"
-    list_exhibition
-  elsif input == "exit"
-    input = 0
+  input = ""
+  while input != 0
+    menu
+    input = gets.chomp.downcase
+    if input == "list"  
+      list_exhibition
+    elsif input == "exit"
+      input = 0
+    else
+      exhibition_info(input.to_i)
+    end
   end
-  
-end
   puts "Thank You For Visiting Our Museum!"
   end 
   
