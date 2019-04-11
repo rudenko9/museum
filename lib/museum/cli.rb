@@ -4,12 +4,15 @@ class CLI
  puts  "                        WELCOME !!!       "
   Scraper.new.scrape_page
   list_exhibition
-  puts " Type the number to got more info: "
+  menu
   input = gets.chomp.to_i 
   while input != 0 
   exhibition_info(input)
+  menu
   input = gets.chomp.to_i
-end 
+  
+end
+  puts "Thank You For Visiting Our Museum!"
   end 
   
   def list_exhibition
@@ -20,7 +23,9 @@ end
   end
   
   def menu
-   
+   puts " Type the number to got more info: "
+   puts "Type 'exit' to quit"
+   puts "Type 'list' to show exhibitions"
     
   end 
   
@@ -35,11 +40,6 @@ end
       puts "Please enter a valid selection"
     end
   end 
-  
-  def exit
-    puts "Thank You For Visiting Our Museum!"
-  end 
-  
   
 
 end 
