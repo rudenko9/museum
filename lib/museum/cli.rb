@@ -22,8 +22,8 @@ class CLI
       menu
       elsif input == "exit"
       exit
-      elsif new_exhibition  = Exhibition.new(title).all.length[input.to_i -1]
-       puts "#{new_exhibition}"
+      #elsif new_exhibition  = Exhibition.new(title).all.length[input.to_i -1]
+       #puts "#{new_exhibition}"
       menu
     #binding.pry
     
