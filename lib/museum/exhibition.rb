@@ -1,5 +1,5 @@
 class Exhibition 
-  attr_accessor  :title, :info, :url  
+  attr_accessor  :title, :info  
   
   
   @@all = []
