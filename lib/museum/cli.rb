@@ -27,9 +27,13 @@ class CLI
   end
   
   def menu
-   puts " Type the number to got more info: "
+   puts "*****************************************************************"
+   puts "Type the number get more info about paticular exhibition: "
+   puts "-----------------------------------------------------------------"
    puts "Type 'exit' to quit"
+   puts "-----------------------------------------------------------------"
    puts "Type 'list' to show exhibitions"
+   puts "*****************************************************************"
     
   end 
   
@@ -37,8 +41,8 @@ class CLI
     if selection <= Exhibition.all.size && selection > 0 
       index = selection - 1
       obj = Exhibition.all[index]
-      puts "Title of exhibition is #{obj.title}"
-      puts "the info about particular exhibition is:"
+      puts "Title of the exhibition is: #{obj.title}! "
+      puts "The information about currect exhibition is:"
       puts obj.info
     else
       puts "Please enter a valid selection"
