@@ -4,7 +4,11 @@ class CLI
  puts  "                        WELCOME !!!       "
   Scraper.new.scrape_page
   list_exhibition
-  menu
+  puts " Type the number to got more info: "
+  input gets.chomp.to_i 
+  while input != 0 
+  list_exhibition
+  
   end 
   
   def list_exhibition
@@ -15,21 +19,18 @@ class CLI
   end
   
   def menu
-    puts ""
-    input = gets.strip.downcase
-    if input == "list"
-      list_exhibition
-      menu
-      elsif input == "exit"
-      exit
-      #elsif new_exhibition  = Exhibition.new(title).all.length[input.to_i -1]
-       #puts "#{new_exhibition}"
-      menu
-    #binding.pry
+   
     
-  end   
   end 
   
+  def exhibition_info(selection)
+    selection -= 1
+    obj = Exhibition.all[selection]
+    puts "Title of exhibition is #{obj.title}"
+    puts "the info about particular exhibition is:"
+    puts obj.info
+    
+  end 
   
   def exit
     puts "Thank You For Visiting Our Museum!"
