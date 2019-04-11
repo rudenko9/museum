@@ -9,7 +9,7 @@ class Scraper
       title = exhibition.css("h2").text.strip 
       new_exhibition  = Exhibition.new(title) unless title.empty?
       new_exhibition.info = exhibition.css("p").text unless new_exhibition.nil?
-       binding.pry
+       #binding.pry
        #new_exhibition.url = exhibition.css('div a').attributes[href]
       #new_exhibition.url = exhibition.search('a').attributes[href]
       

@@ -5,10 +5,11 @@ class CLI
   Scraper.new.scrape_page
   list_exhibition
   puts " Type the number to got more info: "
-  input gets.chomp.to_i 
+  input = gets.chomp.to_i 
   while input != 0 
-  list_exhibition
-  
+  exhibition_info(input)
+  input = gets.chomp.to_i
+end 
   end 
   
   def list_exhibition
