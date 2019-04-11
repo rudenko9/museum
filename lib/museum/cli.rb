@@ -9,7 +9,11 @@ class CLI
   while input != 0 
   exhibition_info(input)
   menu
-  input = gets.chomp.to_i
+  if input = gets.chomp.downcase == "list"
+    list_exhibition
+  elsif input == "exit"
+    input = 0
+  end
   
 end
   puts "Thank You For Visiting Our Museum!"
