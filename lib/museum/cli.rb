@@ -25,12 +25,15 @@ end
   end 
   
   def exhibition_info(selection)
-    selection -= 1
-    obj = Exhibition.all[selection]
-    puts "Title of exhibition is #{obj.title}"
-    puts "the info about particular exhibition is:"
-    puts obj.info
-    
+    if selection <= Exhibition.all.size && selection > 0 
+      index = selection - 1
+      obj = Exhibition.all[index]
+      puts "Title of exhibition is #{obj.title}"
+      puts "the info about particular exhibition is:"
+      puts obj.info
+    else
+      puts "Please enter a valid selection"
+    end
   end 
   
   def exit
