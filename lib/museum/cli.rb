@@ -8,9 +8,9 @@ class CLI
   end 
   
   def list_exhibition
-    Exhibition.all.each.with_index(1) do |site_name, index|
+    Exhibition.all.each.with_index(1) do |exhibition, index|
       #binding.pry
-      puts "#{index}. #{site_name.title}" 
+      puts "#{index}. #{exhibition.title}" 
       end 
   end
   
@@ -22,8 +22,10 @@ class CLI
       menu
       elsif input == "exit"
       exit
-      elsif     
-    
+      elsif (1).to_i
+      puts "#{Exhibition.new(title)}"
+      menu
+    #binding.pry
     
   end   
   end 
@@ -32,6 +34,7 @@ class CLI
   def exit
     puts "Thank You For Visiting Our Museum!"
   end 
-    
+  
+  
 
 end 
