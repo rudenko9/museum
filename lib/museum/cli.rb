@@ -28,11 +28,11 @@ class CLI
   
   def menu
    puts "*****************************************************************"
-   puts "Type the number get more info about paticular exhibition: "
+   puts "Type the number to get more information about paticular exhibition: "
    puts "-----------------------------------------------------------------"
-   puts "Type 'exit' to quit"
+   puts "Type 'list' to show current exhibitions"
    puts "-----------------------------------------------------------------"
-   puts "Type 'list' to show exhibitions"
+   puts  "Type 'exit' to quit"
    puts "*****************************************************************"
     
   end 
