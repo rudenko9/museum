@@ -1,4 +1,4 @@
-# test hello
+
 # Museum
 
 This CLI ruby gem scrapes current exhibitions from https://www.montclairartmuseum.org/ and provides more information to the user. 
@@ -21,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-To run the program type ruby./bin/museum  and follow the instraction.
+To run the program type ruby ./bin/museum  and follow the instruction.
 
 ## Development
 
